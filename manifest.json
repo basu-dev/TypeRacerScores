@@ -1,0 +1,23 @@
+{
+    "manifest_version":2,
+    "version":"1.0.0",
+    "name":"Records",
+    "description":"TypeRacer Records",
+    "browser_action":{
+        "default_popup":"popup/popup.html"
+    },
+    "background":{
+            "scripts":["background.js"],
+            "persistance":false
+    },
+    "content_scripts":[
+        {
+            "matches":["https://play.typeracer.com/"],
+            "js":["content.js"]
+        }
+    ],
+    "permissions":[
+        "tabs",
+        "storage"
+    ]
+}
